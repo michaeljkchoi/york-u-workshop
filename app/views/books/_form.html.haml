@@ -1,0 +1,8 @@
+= simple_form_for @book do |f|
+  = f.input :title
+  = f.input :description
+  = f.association :author,
+    label_method: :full_name,
+    value_method: :id
+
+  = f.button :submit
